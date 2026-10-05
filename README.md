@@ -1,86 +1,54 @@
-# sql-data-warehouse-project
-modern data warehouse with sql server , ETL, data modeling , analytics .
-Data Warehouse and Analytics Project
-Welcome to the Data Warehouse and Analytics Project repository! 🚀
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+# SQL Data Warehouse Project
 
-🏗️ Data Architecture
-The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers: Data Architecture
+A personal project I built while learning SQL Server and Data Engineering concepts.
+It builds a simple data warehouse in SQL Server, starting from raw CSV files and going through loading, cleaning, transformation, and preparing the data for analysis.
 
-Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
-📖 Project Overview
-This project involves:
+## 🛠️ Tools & Technologies
 
-Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
-ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
-Data Modeling: Developing fact and dimension tables optimized for analytical queries.
-Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+- SQL Server
+- SQL Server Management Studio (SSMS)
+- T-SQL
+- Draw.io
+- Git & GitHub
 
-SQL Development
-Data Architect
-Data Engineering
-ETL Pipeline Developer
-Data Modeling
-Data Analytics
-🛠️ Important Links & Tools:
+## 🏗️ Project Architecture
 
-Datasets: Access to the project dataset (csv files).
-SQL Server Express: Lightweight server for hosting your SQL database.
-SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
-Git Repository: Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-DrawIO: Design data architecture, models, flows, and diagrams.
-Notion: Get the Project Template from Notion
-Notion Project Steps: Access to All Project Phases and Tasks.
-🚀 Project Requirements
-Building the Data Warehouse (Data Engineering)
-Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+The project follows a Bronze, Silver, and Gold layer structure, shown in a Draw.io diagram (source systems and tables in each layer).
 
-Specifications
-Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-Data Quality: Cleanse and resolve data quality issues prior to analysis.
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-Scope: Focus on the latest dataset only; historization of data is not required.
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-BI: Analytics & Reporting (Data Analysis)
-Objective
-Develop SQL-based analytics to deliver detailed insights into:
+- **Sources:** CRM and ERP CSV files (customers, products, and sales data).
+- **Bronze:** Raw data loaded as-is from the source files.
+- **Silver:** Cleaned, standardized, and transformed data.
+- **Gold:** Final data prepared for analysis.
 
-Customer Behavior
-Product Performance
-Sales Trends
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+## 🗂️ Project Structure
 
-For more details, refer to docs/requirements.md.
-
-📂 Repository Structure
-data-warehouse-project/
+```text
+sql-data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
-☕ Stay Connected
+├── datasets/        # Source CSV files (CRM and ERP)
+├── docs/            # Architecture diagram, data catalog, naming conventions
+├── scripts/
+│   ├── bronze/      # Loading raw data
+│   ├── silver/      # Data cleaning and transformation
+│   └── gold/        # Analytical data models
+├── tests/           # Data quality checks
+├── README.md
+└── LICENSE
+```
 
-🛡️ License
-This project is licensed under the MIT License. You are free to use, modify, and share this project with proper attribution.
+## 🎯 What I Practiced
+
+- Loading CSV files into SQL Server
+- Cleaning and transforming data across Bronze, Silver, and Gold layers
+- Using SQL functions such as `TRIM`, `CASE`, `NULLIF`, and `ROW_NUMBER`
+- Removing duplicates and handling missing or incorrect values
+- Writing data quality checks
+- Managing the project with Git and GitHub
+
+## 📌 Note
+
+This is a learning project. I followed an online tutorial as a guide and practiced the concepts by implementing the project and working through the SQL scripts myself.
+
+## 🛡️ License
+
+This project is licensed under the MIT License.
