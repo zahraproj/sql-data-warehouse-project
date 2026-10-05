@@ -26,7 +26,7 @@ The project follows a Bronze, Silver, and Gold layer structure, shown in a Draw.
 sql-data-warehouse-project/
 │
 ├── datasets/        # Source CSV files (CRM and ERP)
-├── docs/            # Architecture diagram, data catalog, naming conventions
+├── docs/            # Architecture diagram
 ├── scripts/
 │   ├── bronze/      # Loading raw data
 │   ├── silver/      # Data cleaning and transformation
